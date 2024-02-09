@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*for navbar*/
+.navbar{
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 26px;
+  box-shadow: 0 8px -6px gray;
+  -webkit-box-shadow: 0 8px -6px gray;/*if browser doesnot support box shadow webkit aloows us to make properties browser specific*/
+  border-bottom: solid gray !important;/*if you use the !important rule, it will override ALL previous styling rules for that specific property on that element*/
+  
+}
+
+.nav-link{
+  font-weight: 300 !important;
+}
