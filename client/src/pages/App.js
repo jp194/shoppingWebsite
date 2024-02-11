@@ -4,7 +4,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Policy from "./Policy";
 import Home from "./Home";
-import PageNotFound from "./PageNotFpund";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
