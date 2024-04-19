@@ -15,9 +15,7 @@ function Layout(props) {
         <meta name="author" content={props.author} />
       </Helmet>
       <Header />
-      <main style={{ minHeight: "80vh" }}>
-        <h1>{props.children}</h1>
-      </main>
+      <main style={{ minHeight: "80vh" }}>{props.children}</main>
       <Footer />
     </div>
   );
