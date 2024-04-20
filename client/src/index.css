@@ -56,4 +56,48 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
+}
+
+.register-box{
+  margin : 0;
+  padding : 0;
+  height:110vh;
+  width:60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:rgb(235, 225, 225);
+  border-width: 3px;
+  border-color: gray;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.login{
+  margin : 0;
+  padding : 0;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.login-box{
+  margin : 0;
+  padding : 0;
+  height:60vh;
+  width:60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:rgb(235, 225, 225);
+  border-width: 3px;
+  border-color: gray;
+  border-radius: 5px;
+  border-style: solid;
 }

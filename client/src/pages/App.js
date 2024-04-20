@@ -4,6 +4,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Policy from "./Policy";
 import Home from "./Home";
+import Login from "./Login";
 import PageNotFound from "./PageNotFound";
 import Register from "./Register";
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/policy" element={<Policy />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -9,10 +9,15 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   registerController: async (req, res) => {
     try {
+      console.log("in register");
       const { name, email, password, phone, address } = req.body;
 
       if (!name || !email || !password || !phone || !address) {
-        res.send({ error: "Please fill all required feilds" });
+        res
+          .status(200)
+          .send({ message: "Please fill all required feilds", success: false });
+
+        return;
       }
 
       const existingUser = await userModel.findOne({ email: email });
