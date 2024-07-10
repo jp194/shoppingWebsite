@@ -57,10 +57,9 @@ module.exports = {
       const { email, password } = req.body;
 
       if (!email || !password) {
-        return res.status(404).send({
+        return res.status(200).send({
           success: false,
           message: "Please enter all details",
-          error,
         });
       }
 
@@ -68,7 +67,7 @@ module.exports = {
       const user = await userModel.findOne({ email });
 
       if (!user) {
-        return res.status(404).send({
+        return res.status(200).send({
           success: false,
           message: "Email doesn't exists.",
         });

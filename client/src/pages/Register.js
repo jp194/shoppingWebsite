@@ -4,6 +4,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../styles/auth.css";
+
 function Register() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -38,79 +40,85 @@ function Register() {
   return (
     <Layout>
       <ToastContainer />
-      <div className="register">
-        <div className="register-box">
-          <h2>Register</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                className="form-control"
-                id="name"
-              />
-            </div>
+      <div className="form-container">
+        <div className="row no-gutters">
+          <div className="col-md-6 ">
+            <form onSubmit={handleSubmit}>
+              <h2 className="title">Sign up</h2>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  className="form-control"
+                  id="name"
+                  placeholder="Name"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                className="form-control"
-                id="email"
-              />
-            </div>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  className="form-control"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-                className="form-control"
-                id="password"
-              />
-            </div>
+              <div className="mb-3">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  className="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Phone</label>
-              <input
-                type="text"
-                value={phone}
-                onChange={(e) => {
-                  setPhone(e.target.value);
-                }}
-                className="form-control"
-                id="phone"
-              />
-            </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={phone}
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                  }}
+                  className="form-control"
+                  id="phone"
+                  placeholder="Phone"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Address</label>
-              <input
-                type="text"
-                value={address}
-                onChange={(e) => {
-                  setAddress(e.target.value);
-                }}
-                className="form-control"
-                id="address"
-              />
-            </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={address}
+                  onChange={(e) => {
+                    setAddress(e.target.value);
+                  }}
+                  className="form-control"
+                  id="address"
+                  placeholder="Address"
+                />
+              </div>
 
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </form>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <div className="col-md-6">
+            <img className="register-img" src="/bag_register.jpg"></img>
+          </div>
         </div>
       </div>
     </Layout>
