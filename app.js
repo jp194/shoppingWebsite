@@ -12,6 +12,7 @@ dotenv.config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const { isAdmin, requireSignIn } = require("./middlewares/authMiddleware");
 
 var app = express();
 
@@ -29,6 +30,15 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api/v1/auth", authRoutes);
+
+app.use("/checkUserLoggedIn", requireSignIn, (req, res) => {
+  res.status(200).send({
+    success: true,
+    message: "User is Admin",
+  });
+
+  return res;
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

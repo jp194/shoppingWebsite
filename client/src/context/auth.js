@@ -12,7 +12,7 @@ function AuthProvider(props) {
 
   useEffect(() => {
     const parsedData = JSON.parse(localStorage.getItem("auth"));
-    if (parsedData != null) {
+    if (parsedData) {
       setAuth({ ...auth, user: parsedData.user, token: parsedData.token });
     }
   }, []);
@@ -23,7 +23,7 @@ function AuthProvider(props) {
   );
 }
 
-// useAuth is a cusstom hook
+// useAuth is a custom hook
 const useAuth = () => useContext(AuthContext);
 
 export { useAuth, AuthProvider };

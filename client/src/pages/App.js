@@ -7,11 +7,15 @@ import Home from "./Home";
 import Login from "./Login";
 import PageNotFound from "./PageNotFound";
 import Register from "./Register";
+import UserLogged from "../private_routes/UserLogged";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<UserLogged />}>
+        <Route path="" element={<Contact />} />
+      </Route>
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/policy" element={<Policy />} />
