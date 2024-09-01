@@ -30,5 +30,5 @@ export default function UserLogged() {
 
     if (auth?.token) fetchData();
   }, [auth]);
-  return ok ? <Outlet /> : <Spinner />;
+  return ok ? <Outlet /> : <Spinner time={5} />;
 }
